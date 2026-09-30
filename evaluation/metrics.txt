@@ -1,0 +1,33 @@
+Evaluation run: 2026-07-07 19:48:11.136671
+Split (random_state=42): 48 train / 16 val / 16 test
+Test set files: ['proc_anon_Calc-Test_P_00495_RIGHT_CC.npy', 'proc_anon_Calc-Test_P_01303_LEFT_CC.npy', 'proc_anon_Calc-Test_P_00497_LEFT_CC.npy', 'proc_anon_Calc-Test_P_00646_LEFT_CC.npy', 'proc_anon_Calc-Test_P_00843_RIGHT_CC.npy', 'proc_anon_Calc-Test_P_00315_LEFT_MLO.npy', 'proc_anon_Calc-Test_P_00906_LEFT_CC.npy', 'proc_anon_Calc-Test_P_00163_LEFT_CC.npy', 'proc_anon_Calc-Test_P_00402_RIGHT_CC.npy', 'proc_anon_Calc-Test_P_00214_LEFT_CC.npy', 'proc_anon_Calc-Test_P_00649_LEFT_CC.npy', 'proc_anon_Calc-Test_P_00352_LEFT_CC.npy', 'proc_anon_Calc-Test_P_00202_RIGHT_CC.npy', 'proc_anon_Calc-Test_P_00879_RIGHT_CC.npy', 'proc_anon_Calc-Test_P_00390_RIGHT_CC.npy', 'proc_anon_Calc-Test_P_01390_RIGHT_CC.npy']
+Number of repeated training runs on this same split: 5
+
+Per-run results:
+  Run 1 (seed=42): accuracy=0.6875 precision=0.7143 recall=0.6250 f1=0.6667 auc=0.7500
+  Run 2 (seed=43): accuracy=0.6250 precision=0.6667 recall=0.5000 f1=0.5714 auc=0.6875
+  Run 3 (seed=44): accuracy=0.8125 precision=0.8571 recall=0.7500 f1=0.8000 auc=0.7969
+  Run 4 (seed=45): accuracy=0.5000 precision=0.5000 recall=0.3750 f1=0.4286 auc=0.6719
+  Run 5 (seed=46): accuracy=0.5625 precision=0.5455 recall=0.7500 f1=0.6316 auc=0.5625
+
+Aggregate (mean +/- std over 5 runs):
+Accuracy:  0.6375 +/- 0.1075
+Precision: 0.6567 +/- 0.1269
+Recall:    0.6000 +/- 0.1458
+F1-score:  0.6196 +/- 0.1214
+ROC-AUC:   0.6937 +/- 0.0794
+
+Summed confusion matrix across all 5 runs (rows=true, cols=predicted, order=[benign, malignant]):
+[[27 13]
+ [16 24]]
+
+Classification report (last run only, run 5):
+              precision    recall  f1-score   support
+
+      benign       0.60      0.38      0.46         8
+   malignant       0.55      0.75      0.63         8
+
+    accuracy                           0.56        16
+   macro avg       0.57      0.56      0.55        16
+weighted avg       0.57      0.56      0.55        16
+

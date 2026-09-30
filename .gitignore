@@ -1,0 +1,54 @@
+# Virtual environment
+venv/
+.venv/
+env/
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Trained models (378 MB each - exceed GitHub's 100 MB limit)
+*.h5
+*.keras
+evaluation/eval_model_*.h5
+
+# Data - CBIS-DDSM is distributed by TCIA under its own terms.
+# See README for how to obtain it.
+data/
+*.dcm
+*.npy
+
+# Runtime logs
+*_log.txt
+ingestion_log.txt
+preprocessing_log.txt
+training_log.txt
+evaluation_log.txt
+
+# Airflow runtime
+airflow_home/
+airflow.db
+airflow.cfg
+logs/
+*.pid
+
+# Scratch files
+import matplotlib*.py
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# Superseded ingestion module.
+# Its anonymization overwrote only three standard tags and never called
+# remove_private_tags(), i.e. the insufficient version the thesis identified.
+# Kept locally for history; deliberately not published, so the unsafe
+# implementation cannot be copied from this repository.
+dicom_processing.py

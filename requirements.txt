@@ -1,0 +1,12 @@
+# Core pipeline dependencies
+pydicom>=2.4
+numpy>=1.24
+scikit-image>=0.22
+scikit-learn>=1.3
+tensorflow>=2.15
+matplotlib>=3.7
+
+# Orchestration
+# Airflow 3.0 replaced the deprecated `schedule_interval` argument with `schedule`.
+# The DAG in this repository uses the 3.0 syntax.
+apache-airflow==3.0.1
